@@ -11,6 +11,7 @@ class EpisodeDashboard < Administrate::BaseDashboard
     course: Field::BelongsTo,
     id: Field::Number,
     title: Field::String,
+    slug: Field::String,
     description: Field::Text,
     position: Field::Number,
     video_link: Field::String,
@@ -26,6 +27,7 @@ class EpisodeDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :course,
     :id,
+    :slug,
     :position,
     :title,
     :description,
@@ -41,6 +43,7 @@ class EpisodeDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :course,
     :title,
+    :slug,
     :description,
     :position,
     :video_link,

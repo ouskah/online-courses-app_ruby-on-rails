@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'episodes/show'
+
   namespace :admin do
     DashboardManifest::DASHBOARDS.each do |dashboard_resource|
       resources dashboard_resource
@@ -21,6 +23,8 @@ Rails.application.routes.draw do
     get "courses"           =>        "courses#index"
 
     get "courses/:slug"     =>        "courses#show", as: :course
+
+    get "courses/:slug_course/episodes/:slug_episode" => "episodes#show", as: :episode
 
 
     
