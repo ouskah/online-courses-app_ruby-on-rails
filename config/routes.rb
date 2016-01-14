@@ -12,13 +12,15 @@ Rails.application.routes.draw do
 
     root "pages#index"    
     
-    get "about"           =>        "pages#about"
+    get "about"             =>        "pages#about"
     
-    get "exams"           =>        "pages#exams"
+    get "exams"             =>        "pages#exams"
     
-    get "concours"        =>        "pages#concours"
+    get "concours"          =>        "pages#concours"
         
-    get "courses"         =>        "courses#index"
+    get "courses"           =>        "courses#index"
+
+    get "courses/:slug"     =>        "courses#show"
     
     
     
