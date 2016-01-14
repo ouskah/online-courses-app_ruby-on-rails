@@ -10,27 +10,11 @@
 
 <h1>Oneline Courses App</h1>
 
-
-<nav>
-	<ul>
-		
-		<li><a href="<%= root_path %>">Home</a></li>
-		<li><a href="<%= courses_path %>">Courses</a></li>
-		<li><a href="<%= about_path %>">About</a></li>
-	</ul>
-</nav>
-
+<%= render "layouts/partials/nav" %>
 
 <%= yield %>
 
-<hr/>
-
-<footer>
-	
-	<p> Built by Crea'TICE - &copy : 2015 All Right Reserved</p>
-
-</footer>
-
+<%= render "layouts/partials/footer" %>
 
 
 </body>

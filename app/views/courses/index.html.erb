@@ -3,8 +3,8 @@
 <% @courses.each do |course| %>
        <h2><%= course.title %></h2> 
 
-		<img src="<%= course.image.url(:thumb) %>" alt="<%= course.title %>">
+       <%= image_tag course.image.url(:thumb), alt: course.title %>
 
-       <p><%= course.description %></p>
+       <p> <%= course.description %> </p>
         <hr/>
 <% end %>
