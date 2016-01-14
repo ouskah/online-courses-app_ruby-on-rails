@@ -5,7 +5,7 @@ class CoursesController < ApplicationController
     end
 
     def show
-    	@course = Course.find_by_slug(params[:slug])
+    	@course = Course.find_by(slug: params[:slug])
     		
 
     		if @course.nil?

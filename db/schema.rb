@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160114134232) do
+ActiveRecord::Schema.define(version: 20160114175945) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "title"
@@ -28,11 +28,11 @@ ActiveRecord::Schema.define(version: 20160114134232) do
   create_table "episodes", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
-    t.integer  "order"
     t.string   "video_link"
     t.integer  "course_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "position"
   end
 
   add_index "episodes", ["course_id"], name: "index_episodes_on_course_id"
