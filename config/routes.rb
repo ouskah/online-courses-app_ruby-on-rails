@@ -1,16 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'episodes/show'
-
-  namespace :admin do
-    DashboardManifest::DASHBOARDS.each do |dashboard_resource|
-      resources dashboard_resource
-    end
-
-    root controller: DashboardManifest::ROOT_DASHBOARD, action: :index
-  end
-
-  get 'courses/index'
 
     root "pages#index"    
     
@@ -27,20 +16,19 @@ Rails.application.routes.draw do
     get "courses/:slug_course/episodes/:slug_episode" => "episodes#show", as: :episode
 
 
+  devise_for :users
+
+
+  namespace :admin do
+    DashboardManifest::DASHBOARDS.each do |dashboard_resource|
+      resources dashboard_resource
+    end
+
+    root controller: DashboardManifest::ROOT_DASHBOARD, action: :index
+  end
+
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   
     
     
     

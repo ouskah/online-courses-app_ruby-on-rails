@@ -27,6 +27,13 @@ gem 'paperclip', '~> 4.3', '>= 4.3.2'
 # Bootstrap-sass
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
+# gem devise pour la gestion des authentifications
+gem 'devise', '~> 3.5', '>= 3.5.3'
+
+# Gem devise-bootstrap-views
+gem 'devise-bootstrap-views', '~> 0.0.7'
+
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
