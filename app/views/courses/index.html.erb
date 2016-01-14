@@ -1,10 +1,20 @@
-<h1>List of Courses (<%= Course.count %>) </h1> 
+<h1> <%= @courses.count %> Courses available ! </h1> 
 
-<% @courses.each do |course| %>
-       <h2><%= course.title %></h2> 
+<br>
+	<div class="row">
+		<% @courses.each do |course| %>
 
-       <%= image_tag course.image.url(:thumb), alt: course.title %>
+			   <div class="col-sm-6 col-md-4">
+				    <div class="thumbnail">
+			       		<%= image_tag course.image.url(:thumb), alt: course.title %>
+				      		<div class="caption">
+			       				<h3><%= course.title %></h3> 
+					       		<p> <%= course.description %> </p>
+						        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
+					      	</div>
+				    </div>
+			  </div>
 
-       <p> <%= course.description %> </p>
-        <hr/>
-<% end %>
+		<% end %>
+	</div>
+

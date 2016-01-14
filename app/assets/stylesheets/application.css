@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+
+ body {
+
+	padding-top: 70px;
+
+ }
+
+ #main-footer {
+
+	margin-top: 5em;
+
+ }
+
+ #content, #main-footer, #main-menu{
+
+ 	font-family: 'Roboto', sans-serif;
+ }
