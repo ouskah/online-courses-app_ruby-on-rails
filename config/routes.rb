@@ -20,7 +20,9 @@ Rails.application.routes.draw do
         
     get "courses"           =>        "courses#index"
 
-    get "courses/:slug"     =>        "courses#show"
+    get "courses/:slug"     =>        "courses#show", as: :course
+
+
     
     
     
