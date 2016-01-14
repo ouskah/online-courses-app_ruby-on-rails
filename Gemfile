@@ -24,6 +24,10 @@ gem 'dotenv-rails', '~> 2.0', '>= 2.0.2'
 gem 'paperclip', '~> 4.3', '>= 4.3.2'
 
 
+# Bootstrap-sass
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
