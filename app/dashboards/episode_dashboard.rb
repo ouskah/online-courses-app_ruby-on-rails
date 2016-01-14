@@ -12,7 +12,7 @@ class EpisodeDashboard < Administrate::BaseDashboard
     id: Field::Number,
     title: Field::String,
     description: Field::Text,
-    order: Field::Number,
+    position: Field::Number,
     video_link: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -26,6 +26,7 @@ class EpisodeDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :course,
     :id,
+    :position,
     :title,
     :description,
   ]
@@ -41,14 +42,14 @@ class EpisodeDashboard < Administrate::BaseDashboard
     :course,
     :title,
     :description,
-    :order,
+    :position,
     :video_link,
   ]
 
   # Overwrite this method to customize how episodes are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(episode)
-  #   "Episode ##{episode.id}"
-  # end
+  def display_resource(episode)
+    episode.title
+  end
 end
