@@ -1,0 +1,30 @@
+<article>
+	
+	<h2>  <%= @course.title %> </h2>
+
+	<%= image_tag @course.image.url(:thumb, alt: "@course.title") %> <br/> <br/>
+	<%= @course.description %>
+
+	<hr/>
+
+	<section>
+		
+		<h2> Liste des Episodes (<%= @course.episodes.count %>) </h2>
+			
+			<% if @course.episodes.empty? %>
+				<p>Aucun épisode disponible !</p> 
+			<% else %>
+				<br/>
+				<% @course.episodes.order("position").each do |episode| %>    <!-- voir app/models/episodes.rb-->
+					<a href="<%= episode_path(@course.slug, episode.slug)%>"><h3> <%= episode.position %>. <%= episode.title %> </h3> </a>
+					<%= episode.description %>
+				<br/>
+			<% end %>
+		<% end %>
+	</section>
+
+
+
+
+
+</article>
