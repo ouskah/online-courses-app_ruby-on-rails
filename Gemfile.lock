@@ -128,7 +128,7 @@ GEM
       mini_portile2 (~> 2.0.0.rc2)
     normalize-rails (3.0.3)
     orm_adapter (0.5.0)
-    paperclip (4.3.2)
+    paperclip (<= 5.1.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       cocaine (~> 0.5.5)
